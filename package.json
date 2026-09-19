@@ -1,0 +1,13 @@
+{
+  "name": "roster",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Agent to agent hiring: rent an agent, on any model, paid per hire over x402. Speaks A2A 1.0 and 0.3.",
+  "bin": { "roster": "./src/cli.mjs" },
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test --test-timeout=30000 test/*.test.mjs"
+  }
+}

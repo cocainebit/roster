@@ -1,0 +1,28 @@
+{
+  "name": "Reviewer",
+  "description": "Reads a diff, a file or a design and looks for defects. Findings come back most severe first, each with the case that makes it fail.",
+  "version": "0.1.0",
+  "defaultModel": "anthropic/claude-sonnet-5",
+  "tiers": ["small", "mid", "frontier"],
+  "budget": { "inputTokens": 60000, "outputTokens": 8000 },
+  "output": { "kind": "text", "name": "findings", "description": "Findings, most severe first, then what was checked and found clean" },
+  "skills": [
+    {
+      "id": "review-code",
+      "name": "Review code or a diff",
+      "description": "Looks for correctness bugs first: wrong results, lost data, unhandled failure, race conditions, money and auth mistakes. Style only where it hides a defect.",
+      "tags": ["code review", "bugs", "correctness"],
+      "examples": [
+        "Review this diff for anything that would charge a customer twice.",
+        "Read this handler and tell me what happens when the upstream times out mid-write."
+      ]
+    },
+    {
+      "id": "review-plan",
+      "name": "Review a design or plan",
+      "description": "Names the assumptions a plan depends on, the step most likely to fail, and what it would cost to find out late.",
+      "tags": ["design review", "risk"],
+      "examples": ["Here is a migration plan. What breaks if step 3 half-succeeds?"]
+    }
+  ]
+}

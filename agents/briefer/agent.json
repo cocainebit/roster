@@ -1,0 +1,21 @@
+{
+  "name": "Briefer",
+  "description": "Long document in, a brief out. States what it left out, so the reader knows what the brief is not.",
+  "version": "0.1.0",
+  "defaultModel": "anthropic/claude-haiku-4-5-20251001",
+  "tiers": ["open", "small", "mid", "frontier"],
+  "budget": { "inputTokens": 80000, "outputTokens": 4000 },
+  "output": { "kind": "text", "name": "brief", "description": "The brief, then what it deliberately left out" },
+  "skills": [
+    {
+      "id": "brief",
+      "name": "Brief a long document",
+      "description": "Condenses a document, thread or set of notes to the decisions, numbers and open questions in it, at the length the caller asks for.",
+      "tags": ["summary", "brief", "reading"],
+      "examples": [
+        "Brief this 40 page spec in 200 words for someone who has to implement it.",
+        "What was decided in this thread, and what is still open?"
+      ]
+    }
+  ]
+}

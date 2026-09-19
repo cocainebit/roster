@@ -1,0 +1,23 @@
+{
+  "name": "Foreman",
+  "description": "Takes a job, decides which agents in the hall to hire for it, hires them, and delivers their work with its own synthesis on top.",
+  "version": "0.1.0",
+  "defaultModel": "anthropic/claude-sonnet-5",
+  "tiers": ["mid", "frontier"],
+  "budget": { "inputTokens": 120000, "outputTokens": 12000 },
+  "output": { "kind": "text", "name": "synthesis", "description": "What was hired, what each one delivered, and the answer to the original job" },
+  "orchestrator": true,
+  "hires": ["copy-editor", "extractor", "reviewer", "briefer"],
+  "skills": [
+    {
+      "id": "subcontract",
+      "name": "Break a job up and subcontract it",
+      "description": "Plans which specialists a job needs, hires them from this hall inside the budget of this hire, and puts their output together. The caller pays once.",
+      "tags": ["orchestration", "subcontracting", "multi-agent"],
+      "examples": [
+        "Here is a design doc. Brief it, review it for defects, and give me both plus what you make of it.",
+        "Turn these support emails into a table of issues, then write the paragraph I should send the team."
+      ]
+    }
+  ]
+}

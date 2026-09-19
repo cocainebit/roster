@@ -1,0 +1,22 @@
+{
+  "name": "Extractor",
+  "description": "Messy text in, the caller's JSON shape out. Returns data that fits the requested shape, or a plain refusal.",
+  "version": "0.1.0",
+  "defaultModel": "anthropic/claude-haiku-4-5-20251001",
+  "tiers": ["open", "small", "mid", "frontier"],
+  "budget": { "inputTokens": 40000, "outputTokens": 6000 },
+  "output": { "kind": "data", "name": "extracted", "description": "One JSON value in the shape the caller asked for" },
+  "skills": [
+    {
+      "id": "extract",
+      "name": "Extract structured data",
+      "description": "Pulls fields out of prose, tables, logs or receipts into the JSON shape the caller describes. Reports a field it could not find as null rather than filling it in.",
+      "tags": ["extraction", "json", "parsing", "data"],
+      "examples": [
+        "Pull every line item and total out of this receipt as {items: [{name, qty, priceUsd}], totalUsd}.",
+        "From this thread, list each person, their role and what they committed to."
+      ],
+      "outputModes": ["application/json"]
+    }
+  ]
+}

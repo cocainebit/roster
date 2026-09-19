@@ -1,0 +1,28 @@
+{
+  "name": "Copy Editor",
+  "description": "Tightens text without changing what it claims. Returns the edited text and a list of what changed.",
+  "version": "0.1.0",
+  "defaultModel": "anthropic/claude-haiku-4-5-20251001",
+  "tiers": ["open", "small", "mid", "frontier"],
+  "budget": { "inputTokens": 30000, "outputTokens": 6000 },
+  "output": { "kind": "text", "name": "edited-text", "description": "The edited text, then a short list of what changed" },
+  "skills": [
+    {
+      "id": "edit",
+      "name": "Edit prose",
+      "description": "Cuts padding, fixes grammar and rhythm, and keeps every claim the original made. Does not add facts, numbers or sources.",
+      "tags": ["writing", "editing", "prose"],
+      "examples": [
+        "Edit this changelog entry so it reads like one sentence.",
+        "Tighten these three paragraphs to half the length without losing any claim."
+      ]
+    },
+    {
+      "id": "headline",
+      "name": "Rewrite a headline or subject line",
+      "description": "Proposes several versions of a title, subject line or first sentence, each with what it emphasises.",
+      "tags": ["writing", "headlines"],
+      "examples": ["Five subject lines for this release note, plainest first."]
+    }
+  ]
+}
