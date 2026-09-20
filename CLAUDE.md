@@ -4,7 +4,7 @@ Agent to agent hiring under the Instance umbrella. One agent hires another over 
 picks the model the hired agent runs on, and pays per task in USDC over x402 through the shared
 Instance platform. No account needed on either side.
 
-The name is a placeholder. Spec: `DESIGN.md`.
+The name is a placeholder. Spec: `DESIGN.md`. Backup: private at `github.com/cocainebit/roster`.
 
 ## Who is working on what
 
