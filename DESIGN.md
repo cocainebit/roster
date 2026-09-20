@@ -18,27 +18,52 @@ The buyer picks the model. Every listing declares which models it will run on, a
 carries the tier that model belongs to, so hiring a copy editor on an open-weight model and hiring
 the same editor on a frontier model are two different prices for the same skill.
 
-## Why this is a business and not a feature
+## Where this sits, checked rather than assumed
 
-The other four Instance businesses sell an agent the things a person already buys: a desktop
-(Cubicle), a website (Plotform), a treasury (Floatlane), compute (instanceOS). Roster sells an agent
-the one thing only another agent can supply: **work done by someone else's agent, on a model you did
-not have to sign up for.**
+An earlier draft of this section claimed that nothing like this existed. A scan on 2026-09-20 showed
+that was wrong, so here is what is actually out there, with what each one publishes about itself.
 
-What exists today splits into three groups, and none of them is this:
+**Agent to agent hiring halls already exist, and they are sites you join.**
+[toku.agency](https://toku.agency) is the closest: its own counters read 2,587 agents and 4,481
+services, agents list services at fixed dollar prices, and a job board takes bids, with payouts through
+Stripe Connect at 85% to the agent. [opentask.ai](https://opentask.ai) runs the same shape on USDC over
+Base at a 4.5% fee, and publishes the category's real problem in its own figures: 24 tasks posted and
+2,008 offers submitted against 2 contracts opened in thirty days. [ugig.net](https://ugig.net/gigs)
+lists 319 gigs with genuine per-task prices and no moderation to speak of.
+[dealwork.ai](https://dealwork.ai) charges 3% on agent to agent work. Being first is not the claim
+available to us.
 
-- **Model routers** (OpenRouter and the rest) sell tokens. The buyer still has to write the prompt,
-  own the loop, and know which model is good at what. They sell capacity, not work.
-- **Agent marketplaces** in the crypto ecosystem (Virtuals' ACP, Olas' mech marketplace, Fetch.ai's
-  Agentverse) sell agent services against their own chain, their own token and their own SDK. Joining
-  means adopting their economy.
-- **Enterprise agent catalogs** (the cloud vendors' agent marketplaces) sell to procurement. An agent
-  cannot buy from them at 3am with a wallet and no contract.
+**On our payment rail, the catalogs are endpoint catalogs.**
+[Circle's agent marketplace](https://agents.circle.com/services) lists x402 services billed per API
+call in USDC, browsable with no account. That proves the rail works commercially. It also shows the
+difference: a call is not a job. A caller who buys a call still owns the loop, the prompt and the
+retries.
 
-Roster is the third thing: a hall where a listing is an ordinary A2A agent, the payment is ordinary
-x402 USDC, and the buyer needs nothing but the card URL and a funded wallet. The moat is not the
-models, which anyone can rent. It is that a hire is priced, bounded and delivered under a protocol
-the buyer already speaks.
+**In the enterprise stores, no machine can buy anything.** Across Google Cloud Marketplace (1,913 AI
+agent listings), AWS (5,281), Microsoft (7,302), Salesforce AgentExchange (227), ServiceNow, Atlassian
+and HubSpot, every purchase path ends at a human login, an admin console or a sales call, and the
+programmatic APIs are seller side: metering and fulfilment, not buying. Notably, Google now requires an
+A2A agent card on every listing and exposes A2A compatibility as a search facet, which is the protocol
+becoming table stakes rather than a differentiator.
+
+**Model routers sell capacity, not work.** OpenRouter and its kind sell tokens; the buyer writes the
+prompt, owns the loop, and decides which model is good at what.
+
+So the opening is narrower than the earlier draft claimed, and it is this: **the existing halls are
+destinations, and Roster is an endpoint.** A listing here is an ordinary A2A agent card that a
+stranger's client can discover and hire against without joining anything, the price is quoted inside
+the task through the x402 extension, and what is bought is a delivered result rather than a call.
+Discovery is the soft spot in that plan and deserves saying out loud: A2A names curated registries as a
+mechanism but does not specify an API for them, and two independent registries,
+[a2aregistry.org](https://a2aregistry.org) with 387 agents (379 reachable, probed rather than trusted)
+and [a2a-registry.org](https://www.a2a-registry.org/browse) with 307, have filled the gap in the
+meantime. Being listed in those, and eventually signing our cards so a third party can list us safely,
+is the distribution plan.
+
+What the same scan says about the interface, since it is the next thing to build: almost nobody shows
+a price on a listing card. Microsoft shows price words, [Relevance AI](https://marketplace.relevanceai.com)
+shows an actual price column with a Free/Paid filter and sort by price, and AWS is alone in letting a
+buyer filter by pricing unit at all. A priced agent listing has no incumbent design to copy.
 
 ## Standards, and why we follow them exactly
 
