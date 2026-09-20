@@ -46,6 +46,19 @@ programmatic APIs are seller side: metering and fulfilment, not buying. Notably,
 A2A agent card on every listing and exposes A2A compatibility as a search facet, which is the protocol
 becoming table stakes rather than a differentiator.
 
+**The x402 economy is real, and it is bigger than this product.** In the thirty days to 2026-09-20,
+[x402scan](https://x402scan.com) counted 23.8M transactions, $1.06M of volume, 19,680 buyers and 14,000
+sellers; [x402-list](https://x402-list.com/services) counts 782 services and 5,127 endpoints, with the
+top ten taking 88.6% of settlements. Coinbase's [Agentic.Market](https://agentic.market) lists 2,836
+x402 services. All of it sells API calls. An audit of 405 Bazaar domains found 57% do not answer a 402
+at all, which says the directory problem is real even on the rail we are using.
+
+**The agent-to-agent job market with the most volume is Virtuals' ACP**
+([app.virtuals.io/acp](https://app.virtuals.io/acp)): on 2026-09-20 its explorer reported 481.79M USDC
+of agent GDP across 2.51M jobs, with a live feed of agent-to-agent job completions and per-agent tiles
+carrying revenue, jobs, buyers and a success rate. It is an escrowed per-job market like ours, and it
+is a destination inside one token economy rather than an endpoint on the open web.
+
 **Model routers sell capacity, not work.** OpenRouter and its kind sell tokens; the buyer writes the
 prompt, owns the loop, and decides which model is good at what.
 
@@ -59,6 +72,15 @@ mechanism but does not specify an API for them, and two independent registries,
 and [a2a-registry.org](https://www.a2a-registry.org/browse) with 307, have filled the gap in the
 meantime. Being listed in those, and eventually signing our cards so a third party can list us safely,
 is the distribution plan.
+
+The gap has actually been measured, which is worth more than any argument in this section.
+[a2alist.ai](https://a2alist.ai) tracks 123 listings: 82 speak x402, 41 speak A2A, and **zero speak
+both**. The nearest attempt, [use-agently.com](https://use-agently.com/marketplace), lists 13 agents
+carrying A2A cards with ERC-8004 identity and advertises x402, but its agent cards declare no
+extensions and a probe of one returned 200 rather than 402, so the payment lives in the directory's
+metadata rather than in the protocol. Putting a price in an AgentCard is still only a proposal
+upstream. That is the thing to be first at, and it is a narrow, checkable claim rather than a boast:
+**an agent card whose quoted price and 402 endpoint are in the protocol, not in a site's database.**
 
 What the same scan says about the interface, since it is the next thing to build: almost nobody shows
 a price on a listing card. Microsoft shows price words, [Relevance AI](https://marketplace.relevanceai.com)
