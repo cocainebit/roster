@@ -137,8 +137,8 @@ budget. Three kinds:
 
 That last point is the whole answer to "who gets paid". **In v0, Roster is the only seller.** A
 published listing earns its publisher nothing, and the API says so in as many words, because paying a
-third party out of money we collected is money transmission (the same finding that shaped Floatlane's
-custody plan). The two ways out, both the owner's decision, not a session's:
+third party out of money we collected is money transmission, which needs licences and counsel before it
+needs code. The two ways out, both the owner's decision, not a session's:
 
 - **Non-custodial routing** (recommended): the seller's own address is what `payTo` points at, so the
   buyer pays the seller and we are a directory with a fee of our own. This needs the payment service to
@@ -292,8 +292,8 @@ Three interop details that cost time and are worth keeping:
 
 ## What has not happened here
 
-- **No real model has answered a hire.** There is no `ANTHROPIC_API_KEY` on this machine, and no other
-  provider credential, so every model reads as unavailable and every verification above ran against
+- **No real model has answered a hire.** There is no provider credential on this machine, so every model
+  reads as unavailable and every verification above ran against
   `tools/stub-model.mjs`, a local OpenAI-compatible server that says plainly in its own output that it
   is a stub. What is proven is the wire format of each provider adapter, tested over real HTTP, and not
   the quality of any answer.
@@ -307,8 +307,8 @@ Three interop details that cost time and are worth keeping:
 
 1. **Prices** for `roster.hire.<agent>.<tier>`, and the tier of every model beyond the built-in Claude
    three. Unpriced means free, so today the hall works and earns nothing.
-2. **A model key.** Nothing has run against a real model here: there is no `ANTHROPIC_API_KEY` on this
-   machine, which is the same blocker Plotform, Cubicle's built-in agent and the Instance agents have.
+2. **A model key.** Nothing has run against a real model here, so every hire is refused until one
+   provider credential exists.
 3. **Whether a publisher may earn**, and if so, non-custodial routing or custodial payouts (above).
 4. **The name.** Roster is a placeholder, as instanceOS compute's is.
 5. **Which agent runs this business.** Four of the five Instance agents have a company; the fifth X
